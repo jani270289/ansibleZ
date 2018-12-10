@@ -1,3 +1,3 @@
 ---
-webserverUbuntu: nginx
+webserverUbuntu: apache2
 webserverRedhat: httpd
