@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   tasks:
-  - name:  install webserver on Ubuntu(apache2)
+  - name:  install webserver on Ubuntu(nginx)
     apt:
       name: "{{webserverUbuntu}}"
       state: present
