@@ -4,22 +4,23 @@
   tasks:
   - name:  install webserver on Ubuntu(apache2)
     apt:
-      name: "{{webserverUbuntu}}"
+      name: "{{webserverpackonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
   - name: start webserver on Ubuntu(apache2)
     service: 
-      name: "{{webserverUbuntu}}"
+      name: "{{webserverpackonubuntu}}"
       state: started
     when: ansible_os_family =="Debian"
   
-  - name: install webserver on redhat (httpd)
+
+  - name: install webserver on rehat (httpd)
     yum:
-      name: "{{webserverRedhat}}"
+      name: "{{webserverpackonredhat}}"
       state: present
     when: ansible_os_family =="RedHat"
-  - name: start webserver on redhat
+  - name: start webserver on rehat
     service:
-      name: "{{webserverRedhat}}"
+      name: "{{webserverpackonredhat}}"
       state: started
     when: ansible_os_family =="RedHat"
